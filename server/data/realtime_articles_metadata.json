@@ -1,0 +1,21 @@
+{
+  "totalArticles": 50,
+  "processedCount": 50,
+  "timestamp": "2025-09-16T09:39:58.113Z",
+  "sources": [
+    "BBC News",
+    "NPR Topics: News",
+    "World News - Breaking international news and headlines | Sky News"
+  ],
+  "categories": [
+    "General"
+  ],
+  "dateRange": {
+    "earliest": "2025-04-30T14:04:28.000Z",
+    "latest": "2025-09-16T09:21:19.000Z"
+  },
+  "scrapingMethod": "real-time",
+  "chunkingMethod": "overlap",
+  "chunkSize": 500,
+  "overlapSize": 100
+}

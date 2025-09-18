@@ -1,0 +1,45 @@
+{
+  "name": "rag-chatbot",
+  "version": "1.0.0",
+  "description": "RAG-powered chatbot for news websites",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node start.js",
+    "dev": "nodemon start.js",
+    "ingest": "node scripts/ingestNews.js",
+    "ingest:realtime": "node scripts/ingestRealTimeArticles.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rag",
+    "chatbot",
+    "news",
+    "ai",
+    "embeddings"
+  ],
+  "author": "Full Stack Developer",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.2.1",
+    "@qdrant/qdrant-js": "^1.7.0",
+    "axios": "^1.12.2",
+    "cheerio": "^1.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "ioredis": "^5.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.6.5",
+    "redis": "^4.7.1",
+    "rss-parser": "^3.13.0",
+    "socket.io": "^4.7.4",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  }
+}

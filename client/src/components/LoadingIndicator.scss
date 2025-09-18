@@ -1,0 +1,152 @@
+// LoadingIndicator component styles
+.loading-indicator {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.8));
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 1000;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+  min-width: 200px;
+  animation: slideIn 0.3s ease-out;
+  
+  &.hidden {
+    display: none;
+  }
+  
+  .spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top: 2px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    flex-shrink: 0;
+  }
+  
+  .status-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  
+  // Status-specific styles
+  &[data-status="thinking"] {
+    border-left: 4px solid #007bff;
+    
+    .spinner {
+      border-top-color: #007bff;
+    }
+  }
+  
+  &[data-status="processing"] {
+    border-left: 4px solid #ffc107;
+    
+    .spinner {
+      border-top-color: #ffc107;
+    }
+  }
+  
+  &[data-status="complete"] {
+    border-left: 4px solid #28a745;
+    background: linear-gradient(135deg, rgba(40,167,69,0.9), rgba(40,167,69,0.8));
+    
+    .spinner {
+      display: none;
+    }
+    
+    &::before {
+      content: "✓";
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  }
+  
+  &[data-status="error"] {
+    border-left: 4px solid #dc3545;
+    background: linear-gradient(135deg, rgba(220,53,69,0.9), rgba(220,53,69,0.8));
+    
+    .spinner {
+      display: none;
+    }
+    
+    &::before {
+      content: "⚠";
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// Animations
+@keyframes spin {
+  0% { 
+    transform: rotate(0deg); 
+  }
+  100% { 
+    transform: rotate(360deg); 
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .loading-indicator {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    min-width: auto;
+    padding: 0.875rem 1rem;
+    
+    .status-text {
+      font-size: 0.85rem;
+    }
+    
+    .spinner {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .loading-indicator {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    padding: 0.75rem;
+    border-radius: 12px;
+    
+    .status-text {
+      font-size: 0.8rem;
+    }
+    
+    .spinner {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

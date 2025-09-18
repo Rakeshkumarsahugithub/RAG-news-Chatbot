@@ -1,0 +1,138 @@
+// Full-screen RAG Chatbot App Styles
+// Following full-screen specification: zero padding/margins, 100vw/100vh coverage
+
+// Base reset and full-screen setup
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+// Main app container - full screen coverage
+.app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+// App content - takes full space
+.app-content {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+// Chat container - full screen
+.chat-container {
+  flex: 1;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  
+  // Messages wrapper that will scroll
+  .messages-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 0; // Important for flex scrolling
+    
+    // Custom scrollbar
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      
+      &:hover {
+        background: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+// Input container
+.input-container {
+  flex-shrink: 0;
+}
+
+// Responsive breakpoints - maintain full screen on all devices
+@media (max-width: 768px) {
+  .app {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+  }
+  
+  .messages-container {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+  }
+  
+  .messages-container {
+    padding: 0.5rem;
+  }
+}
+
+// Large screens - ensure full utilization
+@media (min-width: 1200px) {
+  .app {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+  }
+}
+
+// Ultra-wide screens - maintain full coverage
+@media (min-width: 1920px) {
+  .app {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+  }
+}

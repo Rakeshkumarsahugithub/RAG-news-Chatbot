@@ -1,0 +1,8 @@
+/* Clean index.css - minimal global styles */
+/* App.scss handles all main styling */
+
+/* Global font smoothing only */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

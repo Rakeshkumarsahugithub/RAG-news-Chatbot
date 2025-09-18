@@ -1,0 +1,17 @@
+{
+  "totalArticles": 50,
+  "processedCount": 50,
+  "timestamp": "2025-09-18T06:40:13.462Z",
+  "sources": [
+    "BBC News",
+    "NPR Topics: News",
+    "World News - Breaking international news and headlines | Sky News"
+  ],
+  "categories": [
+    "General"
+  ],
+  "dateRange": {
+    "earliest": "2025-04-30T14:04:28.000Z",
+    "latest": "2025-09-18T06:16:28.000Z"
+  }
+}

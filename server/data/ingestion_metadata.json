@@ -1,0 +1,36 @@
+{
+  "totalArticles": 50,
+  "processedCount": 50,
+  "timestamp": "2025-09-16T07:12:11.692Z",
+  "sources": [
+    "BBC News",
+    "NPR",
+    "Technology Today",
+    "Science Today",
+    "Health Today",
+    "Business Today",
+    "Politics Today",
+    "Environment Today",
+    "Sports Today",
+    "Education Today",
+    "Culture Today",
+    "World News Today"
+  ],
+  "categories": [
+    "News",
+    "Technology",
+    "Science",
+    "Health",
+    "Business",
+    "Politics",
+    "Environment",
+    "Sports",
+    "Education",
+    "Culture",
+    "World News"
+  ],
+  "dateRange": {
+    "earliest": "2025-09-09T14:40:50.292Z",
+    "latest": "2025-09-16T07:01:46.000Z"
+  }
+}
