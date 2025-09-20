@@ -1,6 +1,7 @@
 # RAG News Chatbot 🤖📰
 
-A sophisticated Retrieval-Augmented Generation (RAG) chatbot built for news websites. This system combines real-time news scraping, vector embeddings, and AI-powered responses to provide intelligent news assistance with comprehensive session management and caching.
+A sophisticated Retrieval-Augmented Generation (RAG) chatbot built for news websites. This system combines real-time news scraping, vector embeddings, and AI-powered responses to provide intelligent news assistance with comprehensive session management and caching. To watch demo video click here - 
+**[▶️ Watch Here](https://drive.google.com/file/d/1sqHO7aZxQPOk6xgjBBR9aWaarncL5RCi/view?usp=drive_link)**
 
 ## ✨ Key Features
 
